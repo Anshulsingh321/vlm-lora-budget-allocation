@@ -1,4 +1,6 @@
-# Modality-Specific LoRA Budget Allocation in Vision-Language Models
+# LoRA Budget Allocation in Vision-Language Models
+
+*An Empirical Study of Vision–Language Adaptation Under Fixed Parameter Budgets*
 
 An empirical study of how to allocate a fixed LoRA parameter budget between
 the vision and text components of a pretrained vision-language model.
