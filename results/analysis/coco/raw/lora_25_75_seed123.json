@@ -1,0 +1,23 @@
+{
+  "name": "lora_25_75_seed123",
+  "num_images": 5000,
+  "num_captions": 25000,
+  "device": "mps",
+  "metrics": {
+    "i2t_r@1": 0.5658,
+    "i2t_r@5": 0.7972,
+    "i2t_r@10": 0.8724,
+    "t2i_r@1": 0.38904,
+    "t2i_r@5": 0.65068,
+    "t2i_r@10": 0.75188,
+    "mean_r@1": 0.47741999999999996,
+    "mean_r@5": 0.72394,
+    "mean_r@10": 0.81214
+  },
+  "elapsed_seconds": 218.48,
+  "type": "lora",
+  "budget": 294912,
+  "allocation": "25_75",
+  "seed": 123,
+  "adapter_path": "results/experiments/flickr30k_lora_25_75_seed123/best_adapter"
+}

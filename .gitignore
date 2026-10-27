@@ -1,9 +1,48 @@
+# Python environments
 venv/
+.venv/
+env/
+
+# Datasets and checkpoints
 data/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.tar
+
+# Python cache
 __pycache__/
 **/__pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and local environment
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated output folders
 results/raw/
 results/processed/
+results 2/
+results/analysis/coco_backup_before_*/
+
+# Trained adapter directories
+**/best_adapter/
+**/last_adapter/
+
+# Local archive of raw evaluation files
+final_retrieval_jsons.zip
+results/**/*debug*/
+results/**/*backup*/
+results/**/*incomplete*/

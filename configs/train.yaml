@@ -1,0 +1,38 @@
+seed: 42
+
+model:
+  name: openai/clip-vit-base-patch32
+
+data:
+  annotations: data/raw/flickr30k/flickr_annotations_30k.csv
+  image_dir: data/processed/flickr30k/images
+  train_split: train
+  validation_split: val
+
+training:
+  epochs: 3
+  batch_size: 16
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  num_workers: 0
+
+peft:
+  method: lora
+  total_trainable_budget: 294912
+  target_modules:
+    - q_proj
+    - v_proj
+  dropout: 0.0
+  alpha_multiplier: 2
+
+evaluation:
+  metrics:
+    - recall_at_1
+    - recall_at_5
+    - recall_at_10
+
+experiment:
+  seed: 42
+  save_best: true
+  selection_metric: mean_recall_at_1
